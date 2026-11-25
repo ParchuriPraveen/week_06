@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Types of CSS</title>
+
+    <!-- INTERNAL CSS -->
+    <style>
+        /* Navigation Bar */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: white;
+            color: rgb(67, 25, 175);
+        }
+
+        .navbar h2 {
+            color: #0a7cee;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 60px;
+        }
+
+        .navbar ul li a {
+            color:  #0a7cee;
+            text-decoration: none;
+        }
+
+        .navbar ul li a:hover {
+            color: #ad178f;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #f2f2f2;
+            color: #292626;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+            justify-content: center;
+        }
+
+        .card {
+            width: 32%;
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 10px gray;
+        }
+
+        .card h2 {
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .inline h2 {
+            background-color: #ffd6d6;
+            color: red;
+        }
+
+        .internal h2 {
+            background-color: #d6f5d6;
+            color: green;
+        }
+
+        .external h2 {
+            background-color: #d6e6ff;
+            color: blue;
+        }
+
+        .example {
+            background-color: #eeeeee;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            min-height: 100px;
+        }
+
+        .where {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .difference {
+            background-color: white;
+            margin: 20px 30px 40px;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #aaa;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #222;
+            color: white;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+            <h2>CSS FUNDAMENTALS</h2>
+
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Inline_CSS.html">Inline</a></li>
+                <li><a href="./Internal_CSS.html">Internal</a></li>
+                <li><a href="./external.html">External</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <div class="header">
+        <h1>CSS Fundamentals</h1>
+        <p>See clearly where CSS is written and how it is used</p>
+    </div>
+
+    <div class="container">
+
+        <!-- INLINE CSS -->
+        <div class="card inline">
+
+            <h2>1. INLINE CSS</h2>
+
+            <p style="color:red; font-size:20px; font-family:cursive;">
+                This paragraph uses Inline CSS.
+            </p>
+
+            <div class="example">
+                &lt;p style="color: red;"&gt;<br>
+                &nbsp;&nbsp;Hello World<br>
+                &lt;/p&gt;
+            </div>
+
+            <p class="where">📍 WHERE?</p>
+
+            <p>
+                CSS is written <b>directly inside the HTML element</b>
+                using the <b>style</b> attribute.
+            </p>
+
+            <p><b>Example:</b></p>
+
+            <code>
+                style="color:red;"
+            </code>
+
+        </div>
+
+
+        <!-- INTERNAL CSS -->
+        <div class="card internal">
+
+            <h2>2. INTERNAL CSS</h2>
+
+            <p>
+                This paragraph uses Internal CSS.
+            </p>
+
+            <div class="example">
+                &lt;style&gt;<br>
+                &nbsp;&nbsp;p {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
+                &nbsp;&nbsp;}<br>
+                &lt;/style&gt;
+            </div>
+
+            <p class="where">📍 WHERE?</p>
+
+            <p>
+                CSS is written inside the
+                <b>&lt;style&gt;</b> tag in the
+                <b>&lt;head&gt;</b> section.
+            </p>
+
+            <p><b>Example:</b></p>
+
+            <code>
+                p { color: red; }
+            </code>
+
+        </div>
+
+
+        <!-- EXTERNAL CSS -->
+        <div class="card external">
+
+            <h2>3. EXTERNAL CSS</h2>
+
+            <p>
+                This paragraph uses External CSS.
+            </p>
+
+            <div class="example">
+                HTML FILE<br><br>
+                &lt;link rel="stylesheet"<br>
+                href="style.css"&gt;
+                <br><br>
+                CSS FILE<br>
+                style.css
+            </div>
+
+            <p class="where">📍 WHERE?</p>
+
+            <p>
+                CSS is written in a
+                <b>separate .css file</b> and connected
+                to the HTML file.
+            </p>
+
+            <p><b>Example:</b></p>
+
+            <code>
+                p { color: red; }
+            </code>
+
+        </div>
+
+    </div>
+
+
+    <!-- DIFFERENCE -->
+    <div class="difference">
+
+        <h2 style="text-align:center;">
+            🔍 MAIN DIFFERENCE
+        </h2>
+
+        <table>
+
+            <tr>
+                <th>CSS Type</th>
+                <th>Where CSS is Written?</th>
+                <th>Example</th>
+                <th>Used For</th>
+            </tr>
+
+            <tr>
+                <td><b>Inline CSS</b></td>
+                <td>Inside HTML element</td>
+                <td>style="color:red;"</td>
+                <td>One element</td>
+            </tr>
+
+            <tr>
+                <td><b>Internal CSS</b></td>
+                <td>Inside &lt;style&gt;</td>
+                <td>p { color:red; }</td>
+                <td>One webpage</td>
+            </tr>
+
+            <tr>
+                <td><b>External CSS</b></td>
+                <td>Separate .css file</td>
+                <td>style.css</td>
+                <td>Multiple webpages</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+</html>

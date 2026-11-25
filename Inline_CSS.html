@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline CSS</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: white;
+        }
+
+        .navbar h2 {
+            color: #0a7cee;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 60px;
+        }
+
+        .navbar a {
+            color: #0a7cee;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            color: #ad178f;
+        }
+
+        /* Page Heading */
+        .page-title {
+            background-color: aqua;
+            text-align: center;
+            font-family: fantasy;
+            padding: 10px;
+            margin: 0;
+        }
+
+        /* Center Container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        /* Card */
+        .card {
+            width: 32%;
+            min-width: 320px;
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 10px gray;
+        }
+
+        .card h2 {
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .inline h2 {
+            background-color: #ffd6d6;
+            color: red;
+        }
+
+        .example {
+            background-color: #eeeeee;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            min-height: 100px;
+        }
+
+        .where {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar ul {
+                gap: 20px;
+                padding: 0;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h2>CSS Fundamentals</h2>
+
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Inline_CSS.html">Inline</a></li>
+                <li><a href="./Internal_CSS.html">Internal</a></li>
+                <li><a href="./external.html">External</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Heading -->
+    <h2 class="page-title">INLINE CSS</h2>
+
+    <!-- Centered Card -->
+    <div class="container">
+
+        <div class="card inline">
+
+            <h2>INLINE CSS</h2>
+
+            <p style="color:red; font-size:20px; font-family:cursive;">
+                This paragraph uses Inline CSS.
+            </p>
+
+            <div class="example">
+                &lt;p style="color: red;"&gt;<br>
+                &nbsp;&nbsp;Hello World<br>
+                &lt;/p&gt;
+            </div>
+
+            <p class="where">📍 WHERE?</p>
+
+            <p>
+                CSS is written <b>directly inside the HTML element</b>
+                using the <b>style</b> attribute.
+            </p>
+
+            <p><b>Example:</b></p>
+
+            <code>style="color:red;"</code>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    margin: 0;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: white;
+}
+
+.navbar h2 {
+    color: #0a7cee;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+.navbar a {
+    color: #0a7cee;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #ad178f;
+}
+
+/* Page Heading */
+h1 {
+    background-color: aqua;
+    text-align: center;
+    font-family: fantasy;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Paragraph */
+p {
+    color: red;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+/* Center Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+/* Card */
+.card {
+    width: 32%;
+    min-width: 320px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 10px gray;
+}
+
+/* Card Heading */
+.card h2 {
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* External CSS Heading */
+.external h2 {
+    background-color: #d6e6ff;
+    color: blue;
+}
+
+/* Example Box */
+.example {
+    background-color: #eeeeee;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace;
+    min-height: 100px;
+}
+
+/* Where Section */
+.where {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        gap: 20px;
+        padding: 0;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
